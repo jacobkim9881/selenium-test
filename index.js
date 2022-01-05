@@ -1,8 +1,13 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
+// should be 'selenium-webdriver/chrome' if .forBrowser('chrome')
+// should be 'selenium-webdriver/firefox' if .forBrowser('firefox')
 const { Options } = require('selenium-webdriver/chrome');
 const path = require('path');
 
 (async function example() {
+    /* This option set profiles for chrome browser by selenium
+      So you don't have to login on new chrome browser
+      */
     let options = new Options();
     //.setChromeBinaryPath(path.normalize(process.env.HOME + 'bin/'));
     //'/Users/kytco/AppData/Local/Goole/Chrome/User\sData/Default/'
